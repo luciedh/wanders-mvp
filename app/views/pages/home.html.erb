@@ -1,2 +1,18 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="site-container" data-controller="category-selection">
+  <h1>Flâneuses, Flâneurs,</h1>
+  <p>Et si plutôt que de suivre les routes tracées par d’autres, vous vous laissiez guider par vos pas, pour découvrir toutes les merveilles que la ville a à vous offrir ? Au rythme de vos déambulations, Wanders vous invite à à vous laisser surprendre par des anecdotes à chaque coin de rue. Alors choisissez les thématiques qui vous intéresse et nous vous emmenons en balade !</p>
+  <div class="btn-container">
+    <% @categories.each do |category| %>
+      <button class="btn-white" data-category-selection-target="category" data-action="click->category-selection#selected"><%= category.name %></button>
+    <% end %>
+  </div>
+
+    <%= form_with url: places_path, method: :get, html: {class:
+    "place-form", data: {category_selection_target: "form"}} do |f| %>
+    <%= f.text_field :query,
+                     class: "d-none",
+                     data: {category_selection_target: "input"} %>
+
+    <%= f.submit "C'est parti !", class: "btn-tangerine" %>
+    <% end %>
+</div>
