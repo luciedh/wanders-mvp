@@ -1,3 +1,11 @@
-<h1><%= @place.fr_title %></h1>
-<p><%= @place.address %></p>
-<p><%= @place.fr_description %></p>
+<div class="site-container">
+  <img src="<%= @place.img_url %>" alt="">
+    <h1><%= @place.fr_title %></h1>
+    <p><%= @place.address %></p>
+    <p><%= @place.fr_description %></p>
+  <%= link_to "Supprimer",
+      place_path(@place) ,
+      data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+  %>
+  <%= link_to "Mettre à jour", edit_place_path(@place)%>
+</div>

@@ -1,0 +1,12 @@
+<div class="site-container">
+  <h1>Mets à jour ton anecdote</h1>
+
+  <%= simple_form_for @place do |f| %>
+    <%= f.input :fr_title, label: 'Titre' %>
+    <%= f.input :fr_description, label: 'Anecdote'  %>
+    <%= f.input :address, label: 'Adresse' %>
+    <%= f.association :category %>
+    <%= f.input :img_url %>
+    <%= f.button :submit, "Uploader", class: "btn-tangerine" %>
+  <% end %>
+</div>
