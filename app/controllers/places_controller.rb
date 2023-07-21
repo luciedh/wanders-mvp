@@ -15,7 +15,8 @@ class PlacesController < ApplicationController
     @markers = @searched_places.map do |place|
       {
         lat: place.latitude,
-        lng: place.longitude
+        lng: place.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: {place: place})
       }
     end
   end
