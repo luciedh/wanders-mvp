@@ -2,3 +2,9 @@
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+
+  <div class="add-btn">
+    <%= link_to new_place_path, class: "add-btn" do %>
+      <i class="fa-solid fa-circle-plus"></i>
+    <% end %>
+  </div>

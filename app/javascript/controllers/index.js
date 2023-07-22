@@ -7,6 +7,9 @@ import { application } from "./application"
 import CategorySelectionController from "./category_selection_controller"
 application.register("category-selection", CategorySelectionController)
 
+import DisplayFavouriteDescriptionController from "./display_favourite_description_controller"
+application.register("display-favourite-description", DisplayFavouriteDescriptionController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 

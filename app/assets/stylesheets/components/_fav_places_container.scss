@@ -1,0 +1,31 @@
+.fav_places_container {
+  padding: 16px;
+  width: 90vw;
+}
+
+.fav_places_main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  img {
+    height: 4.5rem;
+    width: 4.5rem;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  h1 {
+    font-size: x-large;
+  }
+}
+
+.fav_places_details {
+  display: none;
+  background-color: #4628a8;
+  border-radius: 16px;
+  padding: 16px;
+  text-align: justify;
+  &.active {
+    display: flex;
+  }
+}

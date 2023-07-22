@@ -7,4 +7,15 @@
     <p><%= place.address %></p>
     <p><%= place.fr_description %></p>
   </div>
+  <div class="btn-tangerine">
+    <%= link_to edit_place_path(place) do %>
+      <p>Modifier</p>
+    <% end %>
+  </div>
+  <div class="btn-tangerine">
+    <%= link_to "Delete",
+      place_path(place),
+      data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+    %>
+  </div>
 </div>

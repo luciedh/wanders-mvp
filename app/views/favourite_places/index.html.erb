@@ -1,0 +1,19 @@
+<div class="site-container">
+  <h1>Mes Anecdotes</h1>
+  <div data-controller="display-favourite-description">
+    <% @favourite_places.each do |favourite_place| %>
+      <div class="fav_places_container" >
+        <div class="fav_places_main" data-action="click->display-favourite-description#revealContent">
+          <img src="<%= favourite_place.place.img_url %>" alt="">
+          <div>
+            <h1><%= favourite_place.place.fr_title %></h1>
+            <p><%= favourite_place.place.address %></p>
+          </div>
+        </div>
+        <div class="fav_places_details" data-display-favourite-description-target="description">
+          <p><%= favourite_place.place.fr_description %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
