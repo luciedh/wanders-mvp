@@ -39,7 +39,8 @@
 .btn-container {
   width: 95vw;
   margin-bottom: 6rem;
-  margin-left: 9px;
+  display: flex;
+  justify-content: center;
 }
 
 .add-btn {
