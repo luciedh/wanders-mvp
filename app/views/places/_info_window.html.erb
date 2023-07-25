@@ -1,6 +1,6 @@
 <div class="popup-content">
    <div>
-    <img src="<%= place.img_url %>" alt="">
+    <%= cl_image_tag place.photo.key %>
     <div class="add-favourite" data-controller="add-favourite" data-action="click->add-favourite#revealContent">
       <i class="fa-solid fa-star"></i>
     </div>
