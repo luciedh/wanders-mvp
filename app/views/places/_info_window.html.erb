@@ -1,21 +1,27 @@
 <div class="popup-content">
    <div>
     <img src="<%= place.img_url %>" alt="">
+    <div class="add-favourite" data-controller="add-favourite" data-action="click->add-favourite#revealContent">
+      <i class="fa-solid fa-star"></i>
+    </div>
    </div>
   <div class="popup-info">
     <h1><%= place.fr_title %></h1>
     <p><%= place.address %></p>
-    <p><%= place.fr_description %></p>
+    <p class="description"><%= place.fr_description %></p>
   </div>
-  <div class="btn-tangerine">
-    <%= link_to edit_place_path(place) do %>
-      <p>Modifier</p>
-    <% end %>
+  <div class="btn-admin-container">
+    <div>
+      <%= link_to edit_place_path(place), class: "btn-admin" do %>
+        <i class="fa-solid fa-pen-to-square"></i>
+      <% end %>
+    </div>
+    <div class="btn-admin">
+      <%= link_to "Delete",
+        place_path(place),
+        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+      %>
+    </div>
   </div>
-  <div class="btn-tangerine">
-    <%= link_to "Delete",
-      place_path(place),
-      data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-    %>
-  </div>
+
 </div>

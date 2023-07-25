@@ -9,4 +9,10 @@
     <%= f.input :img_url %>
     <%= f.button :submit, "Uploader", class: "btn-tangerine" %>
   <% end %>
+
+  <div class="btn-tangerine">
+    <%= link_to new_category_path do %>
+      <p>Ajouter une catégorie</p>
+    <% end %>
+  </div>
 </div>

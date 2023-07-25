@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+import AddFavouriteController from "./add_favourite_controller"
+application.register("add-favourite", AddFavouriteController)
+
 import CategorySelectionController from "./category_selection_controller"
 application.register("category-selection", CategorySelectionController)
 

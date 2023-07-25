@@ -49,3 +49,20 @@
   right: 50px;
   font-size: xxx-large;
 }
+
+.add-favourite {
+  color: #fadda2;
+  font-size: xx-large;
+  position: fixed;
+  top: 95px;
+  right: 20px;
+  &.active {
+    color: $yellow;
+  }
+}
+
+.btn-admin {
+  text-decoration: none;
+  color: $pink;
+  font-size: x-large;
+}
