@@ -4,4 +4,5 @@ class Place < ApplicationRecord
   belongs_to :category
   has_many :favourite_places
   validates :fr_title, :fr_description, :address, :img_url, presence: true
+  has_one_attached :photo
 end
