@@ -1,12 +1,12 @@
-<div class="site-container">
+<div class="site-container" data-controller="display-favourite-description">
 
   <h1>Mes Anecdotes</h1>
 
-  <div data-controller="display-favourite-description">
+  <div>
 
     <% @favourite_places.each do |favourite_place| %>
 
-      <div class="fav_places_container" data-action="click->display-favourite-description#revealContent">
+      <div class="fav_places_container" data-action="click->display-favourite-description#revealContent" >
 
         <div class="fav_places_main">
           <%= cl_image_tag favourite_place.place.photo.key %>

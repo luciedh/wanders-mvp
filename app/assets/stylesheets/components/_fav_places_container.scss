@@ -1,6 +1,10 @@
 .fav_places_container {
   padding: 16px;
   width: 90vw;
+  &.active {
+    background-color: $tangerine;
+    border-radius: 16px;
+  }
 }
 
 .fav_places_main {
