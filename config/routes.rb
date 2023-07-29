@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources :places
   resources :categories, only: [:new, :create, :destroy]
-  resources :favourite_places, only: [:new, :create, :index, :edit, :update, :destroy]
+  resources :favourite_places, only: [:index, :show, :detroy]
 end

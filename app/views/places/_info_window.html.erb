@@ -1,15 +1,23 @@
 <div class="popup-content">
    <div>
     <%= cl_image_tag place.photo.key %>
-    <div class="add-favourite" data-controller="add-favourite" data-action="click->add-favourite#revealContent">
-      <i class="fa-solid fa-star"></i>
-    </div>
+    <% if !current_user.favourite_places.include?(place) %>
+      <div class="add-favourite" data-controller="add-favourite" data-action="click->add-favourite#changeIcon" data-add-favourite-target="icon" data-place="<%= place.id %>" data-user="<%= current_user.id %>">
+        <i class="fa-regular fa-star"></i>
+      </div>
+    <% else %>
+      <div class="add-favourite" data-controller="add-favourite" data-action="click->add-favourite#changeIcon"  data-add-favourite-target="icon" data-place="<%= place.id %>" data-user="<%= current_user.id %>"  data-favid="<%= favourite_id.to_s %>">
+        <i class="fa-solid fa-star"></i>
+      </div>
+    <% end %>
    </div>
   <div class="popup-info">
     <h1><%= place.fr_title %></h1>
     <p><%= place.address %></p>
     <p class="description"><%= place.fr_description %></p>
   </div>
+
+  <% if current_user.email.include?("wanders.citytour@gmail.com") %>
   <div class="btn-admin-container">
     <div>
       <%= link_to edit_place_path(place), class: "btn-admin" do %>
@@ -23,5 +31,6 @@
       %>
     </div>
   </div>
+  <% end %>
 
 </div>

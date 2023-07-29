@@ -10,8 +10,8 @@
 require "open-uri"
 
 
-puts "Creating user lucie"
-User.create(email: "lucie.dehauteclocque@gmail.com", password: "170191")
+puts "Creating user admin"
+User.create(email: "wanders.citytour@gmail.com", password: "170191")
 puts "User lucie created"
 
 
