@@ -52,17 +52,6 @@
   font-size: xxx-large;
 }
 
-.add-favourite {
-  color: $yellow;
-  font-size: xx-large;
-  position: fixed;
-  top: 95px;
-  right: 20px;
-  &.active {
-    color: $yellow;
-  }
-}
-
 .btn-admin {
   text-decoration: none;
   color: $pink;
