@@ -1,15 +1,17 @@
 <div class="popup-content">
    <div>
     <%= cl_image_tag place.photo.key %>
-    <% if !current_user.favourite_places.include?(place) %>
-      <div class="add-favourite" data-controller="add-favourite" data-action="click->add-favourite#changeIcon" data-add-favourite-target="icon" data-place="<%= place.id %>" data-user="<%= current_user.id %>">
-        <i class="fa-regular fa-star"></i>
-      </div>
-    <% else %>
-      <div class="add-favourite" data-controller="add-favourite" data-action="click->add-favourite#changeIcon"  data-add-favourite-target="icon" data-place="<%= place.id %>" data-user="<%= current_user.id %>"  data-favid="<%= favourite_id.to_s %>">
-        <i class="fa-solid fa-star"></i>
-      </div>
-    <% end %>
+    <div>
+      <% if !current_user.places.include?(place) %>
+        <div class="add-favourite">
+          <i class="fa-regular fa-star"></i>
+        </div>
+      <% else %>
+        <div class="add-favourite">
+          <i class="fa-solid fa-star"></i>
+        </div>
+      <% end %>
+    </div>
    </div>
   <div class="popup-info">
     <h1><%= place.fr_title %></h1>
