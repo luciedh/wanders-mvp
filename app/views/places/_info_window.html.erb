@@ -3,11 +3,11 @@
     <%= cl_image_tag place.photo.key %>
     <div>
       <% if !current_user.places.include?(place) %>
-        <div class="add-favourite">
+        <div class="add-favourite" data-controller="add-favourite" data-action="click->add-favourite#changeIcon" data-add-favourite-target="icon" data-place="<%= place.id %>" data-user="<%= current_user.id %>">
           <i class="fa-regular fa-star"></i>
         </div>
       <% else %>
-        <div class="add-favourite">
+        <div class="add-favourite" data-controller="add-favourite" data-action="click->add-favourite#changeIcon"  data-add-favourite-target="icon" data-place="<%= place.id %>" data-user="<%= current_user.id %>"  data-favid="<%= place.id.to_s %>">
           <i class="fa-solid fa-star"></i>
         </div>
       <% end %>
