@@ -2,7 +2,7 @@
   width: 54vw;
   max-width: 400px;
   transform:none !important;
-  bottom: 20%;
+  bottom: 15%;
   left: 10px;
 }
 
@@ -13,6 +13,8 @@
   position: relative;
   top: 20vh;
   bottom: 6px;
+  right: auto;
+  left: auto;
   margin: 1em 3%;
   overflow-y: scroll;
   -ms-overflow-style: none;  /* IE and Edge */
@@ -51,7 +53,7 @@
   img {
     width: 100%;
     object-fit: cover;
-    height: 150px;
+    height: 400px;
     margin-top: -10px;
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
@@ -66,7 +68,11 @@
 }
 
 .popup-info {
-  margin-top: 24px;
+  margin-top: 5px;
+  .address {
+    font-style: italic;
+    font-weight: bolder;
+  }
   .description {
     text-align: justify;
   }
@@ -76,4 +82,5 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 30px;
 }
