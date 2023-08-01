@@ -1,4 +1,4 @@
-.navbar-lewagon {
+.navbar {
   justify-content: space-between;
   background: none;
   position: sticky;
@@ -10,9 +10,13 @@
   z-index: 10;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.container-fluid {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+  padding-bottom: 10px;
 }
+
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
@@ -22,19 +26,7 @@
   margin-right: 16px;
 }
 
-.navbar-toggler {
-  background-color: $dark-blue;
-  color: $white;
-  padding: 5px;
-  border-radius: 5px;
-}
 
-.container-fluid {
-  display: flex;
-  justify-content: space-between;
-  margin: 5px;
-  padding-bottom: 10px;
-}
 
 .nav-logo{
   width: 100px;
