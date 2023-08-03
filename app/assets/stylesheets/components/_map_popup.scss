@@ -11,8 +11,6 @@
   position: relative;
   top: 20vh;
   bottom: 6px;
-  right: auto;
-  left: auto;
   margin: 1em 3%;
   overflow-y: scroll;
   -ms-overflow-style: none;  /* IE and Edge */
@@ -53,8 +51,6 @@
     object-fit: cover;
     height: 400px;
     margin-top: -10px;
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
   }
   .add-favourite {
     color: $yellow;
@@ -67,6 +63,8 @@
 
 .popup-info {
   margin-top: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
   .address {
     font-style: italic;
     font-weight: bolder;
