@@ -3,7 +3,7 @@
 
   <%= simple_form_for @place do |f| %>
     <%= f.input :fr_title, label: 'Titre', placeholder: 'Titre' %>
-    <%= f.input :fr_description, label: 'Anecdote', placeholder: 'Anecdote'  %>
+    <%= f.input :fr_description, label: 'Anecdote', placeholder: 'Anecdote', :as => :text  %>
     <%= f.input :address, label: 'Adresse', placeholder: 'Adresse'  %>
     <%= f.association :category %>
     <%= f.input :photo, as: :file %>

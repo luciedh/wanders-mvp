@@ -2,7 +2,7 @@
   <%= cl_image_tag @place.photo.key, height: 300, width: 400, crop: :fill %>
     <h1><%= @place.fr_title %></h1>
     <p><%= @place.address %></p>
-    <p><%= @place.fr_description %></p>
+    <p class="place-description"><%= @place.fr_description %></p>
   <%= link_to "Supprimer",
       place_path(@place) ,
       data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
