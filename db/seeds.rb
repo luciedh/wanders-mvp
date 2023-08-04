@@ -21,7 +21,9 @@ Category.create(name: "Insolite") # 2
 Category.create(name: "Gastronomie") # 3
 Category.create(name: "Art") # 4
 Category.create(name: "Architecture") # 5
-Category.create(name: "Nightlife") # 6
+Category.create(name: "Divertissement") # 6
+Category.create(name: "Mode") # 6
+Category.create(name: "Cinéma") # 6
 puts "Categories created"
 
 
