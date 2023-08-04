@@ -5,12 +5,13 @@
 }
 
 .mapboxgl-popup-content {
-  width: 170%;
+  width: 90vw;
   text-align: center;
   font-family: "Open Sans", sans-serif;
   position: relative;
   top: 20vh;
   bottom: 6px;
+  left: 2vh;
   margin: 1em 3%;
   overflow-y: scroll;
   -ms-overflow-style: none;  /* IE and Edge */
@@ -51,6 +52,8 @@
     object-fit: cover;
     height: 400px;
     margin-top: -10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
   }
   .add-favourite {
     color: $yellow;
